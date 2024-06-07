@@ -3,34 +3,50 @@ appropriato sull’esito del controllo */
 
 /////////////////////////////////////////////////////////////////////////
 
-//creare un messaggio
+//dichiarare la variabile messaggio
 let message;
+let content = document.getElementById("text-message");
 
-//chiedere all'utente la mail
-let inputMail = prompt('Scrivi la tua mail');
+//selezionare la classe del form di input
 
-console.log(inputMail);
+const inputMail = document.querySelector('.mail');
 
 //creare un'array che contiene una serie di mail
-
-const listMail = ["chicco@gmail.com", "anastasia@gmail.com", "patrizio.bellotto@hotmail.it", 
-"teresa67@hotmail.it", "marialasuperba@gmail.com", "antonio87@yahoo.it"];
-
+const listMail = ["chicco@gmail.com", "anastasia@gmail.com", "patrizio.bellotto@hotmail.it",
+                "teresa67@hotmail.it", "marialasuperba@gmail.com", "antonio87@yahoo.it"];
 console.log(listMail);
 
-//estrarre i nomi delle mail
+//creare listener che permette all'utente di immettere 
+//l'input della mail
 
-for(let i = 0; i < listMail.length; i++){
+const sendButton = document.querySelector('.send');
 
-    let elementList = listMail[i];
+sendButton.addEventListener('click', 
+    function(){
 
-    //confrontare il dato immesso dall'utente con quelli della lista
-    if (inputMail === elementList) {
-        message = 'La mail che hai inserito corrisponde';// se la mail è valida, comunicare all'utente che è valida
-        console.log(message);
-    } else {
-        message = 'La mail che hai inserito non è tra quelle valide. Riprova';//altrimenti comunicare che la mail non è valida
-        console.log(message);
+        //chiedere all'utente la mail
+        let inputValue = inputMail.value;
+
+        console.log(inputValue);
+
+        //estrarre i nomi delle mail
+
+        for (let i = 0; i < listMail.length; i++) {
+
+            let elementList = listMail[i];
+
+            //confrontare il dato immesso dall'utente con quelli della lista
+            if (inputValue === elementList) {
+                message = 'La mail che hai inserito corrisponde';// se la mail è valida, comunicare all'utente che è valida
+                content.innerHTML = message;
+                console.log(message);
+            } else {
+                message = 'La mail che hai inserito non corrisponde';//altrimenti comunicare che la mail non è valida
+                content.innerHTML = message;
+                console.log(message);
+            }
+
+        }
+
     }
-
-}
+)
