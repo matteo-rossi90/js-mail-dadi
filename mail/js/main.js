@@ -41,11 +41,16 @@ sendButton.addEventListener('click',
             }
         }
 
+        //selezionare l'intestazione di cui cambiare il colore
+        let boxMessage = document.querySelector('#text-message');
+
         // comunicare all'utente se la mail è valida o no
         if (mailChecked) {
-            message = 'La mail che hai inserito corrisponde'; // se la mail è valida, comunicare all'utente che è valida
+            message = 'La tua mail corrisponde'; // se la mail è valida, comunicare all'utente che è valida
+            boxMessage.style.color = 'lime'; //se la mail è valida il messaggio sarà colorato di verde
         } else {
-            message = 'La mail che hai inserito non corrisponde'; // altrimenti comunicare che la mail non è valida
+            message = 'La tua mail non corrisponde. Riprova'; // altrimenti comunicare che la mail non è valida
+            boxMessage.style.color = 'red'; //se la mail non è valida il messaggio sarà colorato di rosso
         }
 
         content.innerHTML = message;
