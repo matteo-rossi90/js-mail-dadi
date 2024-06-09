@@ -3,20 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- link css -->
+     <link rel="stylesheet" href="css/style.css">
     <title>Mail list</title>
 </head>
 <body>
     
-    <!-- form per chiedere la mail all'utente -->
-    <form action="#">
+    <div id="container">
 
-        <h1>Inserisci la tua mail</h1>
-        <input type="text" class="mail" placeholder="Scrivi la mail" required>
-        <button class="send">Invia</button>
-    
-    </form>
+        <h1>Inserisci i tuoi dati</h1>
+        <div id="box">
 
-    <h3 id="text-message"></h3>
+            <!-- form per chiedere dati all'utente -->
+            <form action="#"">
+                
+                <!-- richiesta nome, cognome, data di nascita e indirizzo -->
+                <div class="upper-form">
+                    <div class="col-form">
+                        <label class="text-label" for="">Nome</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="col-form">
+                        <label class="text-label" for="">Cognome</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="col-form">
+                        <label class="text-label" for="">Data di nascita</label>
+                        <input type="date" required>
+                    </div>
+                    
+
+                </div>
+
+                <!-- pulsante per consentire il salvataggio dei dati richiesti -->
+                <div id="btn-submit">
+                    <button class="submit">Invia dati</button>
+                </div>
+                
+                <!-- richiesta mail da convalidare -->
+                <div id="mail-box">
+
+                    <h3 class="text-label">Convalida la tua mail</h3>
+                    <input type="text" class="mail" placeholder="Scrivi la mail" required>
+                    
+                    <!-- pulsante che confronta la mail inserita con quelle ammesse -->
+                    <button class="send">Invia</button>
+                </div>
+            
+            </form>
+            
+            <h3 id="text-message"></h3>
+
+        </div>
+
+    </div>
 
     <!-- link js -->
     <script type="text/javascript" src="js/main.js"></script>
