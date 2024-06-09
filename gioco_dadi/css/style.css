@@ -1,0 +1,93 @@
+/* regole generali */
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgb(22, 132, 44);
+}
+
+#container{
+    margin: 50px auto;
+    width: 80%;
+}
+
+#box,
+.container-box {
+    margin: 20px 0;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+
+#box{
+    background-color: white;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* titolo principale */
+
+h2{
+    color: white;
+    text-align:center;
+    font-size: 40px;
+}
+
+/* regole per il bottone */
+
+button{
+    padding: 8px 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.result{
+    background-color:rgb(22, 132, 44);
+    border-radius: 20px;
+}
+
+.result:hover{
+    background-color: rgb(155, 238, 122);
+    color: black;
+}
+
+/* intestazioni messaggi che compaiono con js */
+h3{
+    margin: 10px 0;
+}
+
+#message-text{
+    font-size: 30px;
+    animation: effect 2s infinite;
+}
+
+/* animazione messaggio di comunicazione per il giocatore */
+
+@keyframes effect {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(5deg);
+    }
+    
+    50% {
+        transform: rotate(0eg);
+    }
+    
+    75% {
+        transform: rotate(-5deg);
+    }
+    
+    100% {
+        transform: rotate(0deg);
+    }
+}
+

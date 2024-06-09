@@ -13,9 +13,9 @@ const contentPlayer = document.querySelector('#message-player');
 let message;
 
 //creare comando che consente al bottone di confrontare il numero 
-//automatico generato dal pc con quello scelto dal giocatore
+//automatico generato dal pc con quello generato per il giocatore
 
-const resultButton = document.querySelector('.result');
+let resultButton = document.querySelector('.result');
 
 resultButton = addEventListener('click',
     function(){

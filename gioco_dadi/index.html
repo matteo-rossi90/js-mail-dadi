@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link css -->
+     <link rel="stylesheet" href="css/style.css">
     <title>Chi vince?</title>
 </head>
 <body>
-    
-    <!-- form per chiedere all'utente il numero -->
 
-    <h3>Premi il pulsante se ti senti fortunato</h3>
-    <button class="result">Risultato</button>
+    <div id="container">
 
-    <div class="container-box">
-        <h3 id="message-player"></h3>
-        <h3 id="message-PC"></h3>
-        <h3 id="message-text"></h3>
+        <h2>Premi il pulsante se ti senti fortunato</h2>
+        <div id="box">
+
+            <!-- Pulsante per chiedere all'utente il numero -->
+            
+            <button class="result">Tenta la sorte</button>
+           
+
+            <div class="container-box">
+                <h3 id="message-player"></h3>
+                <h3 id="message-PC"></h3>
+                <h3 id="message-text"></h3>
+            </div>
+
+        </div>
+
     </div>
-
+    
     <!-- link js -->
     <script type="text/javascript" src="js/main.js"></script>
 </body>
